@@ -14,7 +14,7 @@ This will start the required services and expose the RESTful APIs on port 8087.
 
 ## Usage
 The project is configured with Swagger UI which contains proper documentation about how the app works. You can access the Swagger UI documentation by opening 
-your web browser and navigating to http://localhost:8080/swagger-ui.html. From there, you can explore the available APIs and their endpoints.
+your web browser and navigating to http://localhost:8087/swagger-ui.html. From there, you can explore the available APIs and their endpoints.
 
 ## Technologies Used
 <details>
