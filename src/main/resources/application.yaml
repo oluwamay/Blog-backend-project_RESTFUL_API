@@ -1,0 +1,44 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: 4966209ebe72f2495282
+            client-secret: 5a3c34a6966f02873c1445fd9948ffa0048bfae7
+          google:
+            client-id: 954274482718-o18673io5k8osa4mrfd8kbp294avh2u9.apps.googleusercontent.com
+            client-secret: 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
+  datasource:
+    url: jdbc:mysql://localhost:3306/invogueblog
+    username: root
+    password: Asaph060
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+#  cache:
+#    type: REDIS
+#    redis:
+#      cache-null-values: false
+#      use-key-prefix: true
+#      key-prefix: library
+#      time-to-live: 60000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate.format_sql: true
+#  data:
+#    redis:
+#      host: localhost
+#      port: 6379
+#      timeout: 10000
+
+server:
+  port: 8087
+

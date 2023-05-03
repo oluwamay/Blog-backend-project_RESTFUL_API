@@ -1,6 +1,7 @@
-package com.invogue_fashionblog.dto;
+package com.invogue_fashionblog.dto.requests;
 
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,9 +13,10 @@ import org.hibernate.validator.constraints.Length;
 @NoArgsConstructor
 @Builder
 public class LoginRequest {
-    @Email(message = "Invalid password")
+    @Email(message = "Invalid email")
+    @NotBlank(message="field cannot be empty")
     private String email;
 
-    @Length(min=5, message = "Password length cannot be less than 5")
+    @Length(min=5, max=20, message = "Password length should be between 5 and 20 characters")
     private String password;
 }
