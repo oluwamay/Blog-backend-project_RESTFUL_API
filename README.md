@@ -26,7 +26,7 @@ your web browser and navigating to http://localhost:8087/swagger-ui.html. From t
 * OAuth2
 * PostgreSQL or MySQL
 * Redis
-* Kafka
+* Docker
 * Git
 * Spring Data JPA
 * JUnit/Mockito
