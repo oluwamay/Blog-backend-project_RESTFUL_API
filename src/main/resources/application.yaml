@@ -10,10 +10,9 @@ spring:
             client-id: 954274482718-o18673io5k8osa4mrfd8kbp294avh2u9.apps.googleusercontent.com
             client-secret: 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
   datasource:
-    url: jdbc:mysql://localhost:3306/invogueblog
-    username: root
-    password: Asaph060
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:postgresql://localhost:5432/invogueblog
+    username: asaph
+    password: 1a2b3c
   servlet:
     multipart:
       enabled: true
