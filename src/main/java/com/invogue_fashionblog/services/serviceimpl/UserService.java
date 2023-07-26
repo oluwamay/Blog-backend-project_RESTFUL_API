@@ -15,4 +15,5 @@ public interface UserService {
     ResponseEntity<AuthenticationResponse> authenticateUser(LoginRequest request);
 
     Optional<User> getUser(String userEmail);
+    ResponseEntity<String> deactivateAccount(Long userId);
 }

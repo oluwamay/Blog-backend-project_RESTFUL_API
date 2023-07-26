@@ -30,8 +30,4 @@ public class UserController {
     public ResponseEntity<AuthenticationResponse> logUserIn(@Valid @RequestBody LoginRequest request){
     return userService.authenticateUser(request);
     }
-    @PostMapping("/logout")
-    public ResponseEntity<String> logUserOut(HttpServletRequest request){
-        return ResponseEntity.status(HttpStatus.OK).location(URI.create("/login")).build();
-    }
 }

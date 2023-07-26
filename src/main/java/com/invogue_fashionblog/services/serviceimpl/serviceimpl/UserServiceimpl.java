@@ -48,6 +48,15 @@ public class UserServiceimpl implements UserService {
         var jwtToken = jwtService.generateToken(user);
         return new ResponseEntity<>(AuthenticationResponse.builder().token(jwtToken).message("Account successfully created").build(), HttpStatus.CREATED);
     }
+    @Override
+    public ResponseEntity<String> deactivateAccount(Long userId) {
+        log.info("Deactivate method call");
+
+        User user = repository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "user_id", userId.toString()));
+
+        repository.delete(user);
+        return ResponseEntity.ok().body("User account with Id "+ userId+" deleted");
+    }
 
     @Override
     public ResponseEntity<AuthenticationResponse> authenticateUser(LoginRequest request) {
